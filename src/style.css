@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #61196F;
+  --color-primary-light: #8e3a9c;
+  --color-primary-dark: #3a0d42;
+  
+  --color-secondary: #1F4D3A;
+  --color-secondary-light: #2d6e53;
+  --color-secondary-dark: #122c21;
+  
+  --color-accent: #E99E1E;
+  --color-accent-light: #f1b347;
+  --color-accent-dark: #a66f10;
+  
+  --font-sans: 'Urbanist', sans-serif;
+  --font-heading: 'Urbanist', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-900 bg-white overflow-x-hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
