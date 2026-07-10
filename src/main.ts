@@ -41,3 +41,60 @@ if (menuBtn) {
     alert('Menú móvil (Por implementar)');
   });
 }
+
+// ==============================================
+// Cookie Banner (Ley 1581/2012, SIC Conceptos 74519 y 62132/2020)
+// ==============================================
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const rejectBtn = document.getElementById('cookie-reject');
+
+  if (!banner) return;
+
+  const cookieConsent = localStorage.getItem('skala-cookie-consent');
+
+  if (!cookieConsent) {
+    // Show banner with a slight delay for smooth entrance
+    setTimeout(() => {
+      banner.classList.remove('translate-y-full');
+      banner.classList.add('translate-y-0');
+    }, 1500);
+  }
+
+  function hideBanner() {
+    if (!banner) return;
+    banner.classList.add('translate-y-full');
+    banner.classList.remove('translate-y-0');
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('skala-cookie-consent', 'all');
+    hideBanner();
+  });
+
+  rejectBtn?.addEventListener('click', () => {
+    localStorage.setItem('skala-cookie-consent', 'essential');
+    hideBanner();
+  });
+}
+
+initCookieBanner();
+
+// ==============================================
+// Form consent validation (Decreto 1377/2013)
+// ==============================================
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    const checkbox = document.getElementById('consentimiento') as HTMLInputElement;
+    if (checkbox && !checkbox.checked) {
+      e.preventDefault();
+      checkbox.focus();
+      // Visual feedback
+      const label = checkbox.closest('.flex')!;
+      label.classList.add('animate-pulse');
+      setTimeout(() => label.classList.remove('animate-pulse'), 2000);
+    }
+  });
+}

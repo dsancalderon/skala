@@ -5,6 +5,8 @@
   <link rel="icon" type="image/png" href="/images/skala-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SKALA - Proyecto Residencial en Villavicencio</title>
+  <meta name="description" content="SKALA es un proyecto residencial en Villavicencio, Meta, Colombia. Arquitectura contemporánea, diseño funcional y conexión con el entorno natural del llano. Apartamentos de 35m² a 65m².">
+  <meta name="author" content="Grupo Empresarial KINKU">
   
   <!-- Google Fonts: Urbanist -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,6 +191,13 @@
           </div>
         </div>
       </div>
+
+      <!-- Disclaimer inmobiliario (Ley 1480/2011 Art. 29-33, Circular 004/2024 SIC) -->
+      <div class="mt-12 reveal">
+        <p class="text-white/50 text-xs text-center max-w-4xl mx-auto leading-relaxed italic">
+          Las imágenes, renders y planos presentados son de carácter ilustrativo y referencial. Las áreas, distribuciones, acabados y especificaciones son aproximadas y pueden presentar variaciones respecto al producto final entregado. El proyecto está sujeto a modificaciones por parte de las autoridades competentes (curadurías urbanas) sin previo aviso. Las condiciones definitivas del inmueble se establecerán en el respectivo contrato de compraventa. Proyecto desarrollado por Grupo Empresarial KINKU.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -265,6 +274,14 @@
               <textarea id="mensaje" name="mensaje" rows="2" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none" placeholder="¿En qué podemos ayudarte?" required></textarea>
             </div>
 
+            <!-- Consentimiento de datos personales (Ley 1581/2012) -->
+            <div class="flex items-start gap-2">
+              <input type="checkbox" id="consentimiento" name="consentimiento" required class="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary cursor-pointer shrink-0">
+              <label for="consentimiento" class="text-xs text-gray-600 leading-relaxed cursor-pointer">
+                He leído y acepto la <a href="privacy.html" target="_blank" class="text-primary font-semibold underline hover:text-primary-light">Política de Tratamiento de Datos Personales</a> y los <a href="terms.html" target="_blank" class="text-primary font-semibold underline hover:text-primary-light">Términos y Condiciones</a>. Autorizo el tratamiento de mis datos personales para las finalidades descritas.
+              </label>
+            </div>
+
             <button type="submit" class="w-full bg-accent hover:bg-accent-dark text-white text-base font-bold py-2.5 px-6 rounded-lg transition-colors duration-300 shadow-md">
               Enviar Mensaje
             </button>
@@ -288,6 +305,17 @@
             <li><a class="text-gray-400 hover:text-white transition-colors" href="#">Inicio</a></li>
             <li><a class="text-gray-400 hover:text-white transition-colors" href="#concept">Concepto</a></li>
             <li><a class="text-gray-400 hover:text-white transition-colors" href="#apartments">Tipos de apartamentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-accent mb-4">Legal</h4>
+          <ul class="space-y-3">
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="privacy.html">Política de Privacidad</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="terms.html">Términos y Condiciones</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-1" href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              Derechos del Consumidor (SIC)
+            </a></li>
           </ul>
         </div>
         <div>
@@ -326,10 +354,46 @@
         </div>
       </div>
       <div class="border-t border-gray-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-        <p>© 2026 SKALA - Grupo Empresarial Kinku. Todos los derechos reservados.</p>
+        <p>© 2026 SKALA — [COMPLETAR: Razón Social]. NIT: [COMPLETAR]. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-4 mt-4 md:mt-0">
+          <a class="text-gray-500 hover:text-white transition-colors text-xs" href="privacy.html">Privacidad</a>
+          <span class="text-gray-700">|</span>
+          <a class="text-gray-500 hover:text-white transition-colors text-xs" href="terms.html">Términos</a>
+          <span class="text-gray-700">|</span>
+          <a class="text-gray-500 hover:text-white transition-colors text-xs" href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">SIC</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Banner de Cookies (Ley 1581/2012, SIC Conceptos 74519 y 62132/2020) -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[9999] transition-all duration-500 translate-y-full">
+    <div class="mx-4 mb-4 md:mx-8 md:mb-6">
+      <div class="bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-5 md:p-6 shadow-2xl max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <h3 class="text-white font-bold text-sm">Uso de Cookies</h3>
+            </div>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia de navegación y ofrecer contenido personalizado. Puedes obtener más información en nuestra <a href="privacy.html#cookies" class="text-accent underline hover:text-accent-light">Política de Cookies</a>.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 w-full md:w-auto">
+            <button id="cookie-reject" class="flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-semibold border border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+              Solo esenciales
+            </button>
+            <button id="cookie-accept" class="flex-1 md:flex-initial px-5 py-2 rounded-lg text-xs font-bold bg-accent text-white hover:bg-accent-light transition-colors shadow-lg">
+              Aceptar todas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="/src/main.ts"></script>
 </body>
